@@ -1,0 +1,295 @@
+@charset "UTF-8";
+html, body {
+  background-color: #EEE;
+  color: #666;
+  font-family: sans-serif;
+}
+
+.widget {
+  background-color: #FFF;
+  min-width: 300px;
+  width: 90%;
+  margin: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #002e82;
+}
+.widget h2 {
+  display: block;
+  font-size: 1.1em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.widget .row {
+  width: 100%;
+  clear: both;
+}
+.widget .left {
+  width: 120px;
+  float: left;
+  padding-top: 5px;
+}
+.widget .right {
+  float: left;
+  text-align: initial;
+}
+.widget .result {
+  width: 200px;
+  float: right;
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #002e82;
+  border: 1px solid #002e82;
+  cursor: pointer;
+  background-color: white;
+}
+.widget .result:hover {
+  background-color: #C9E877;
+}
+
+.spacetop {
+  margin: 10px 0;
+}
+
+.wspacing {
+  word-spacing: 10;
+}
+
+.fa-location-arrow {
+  margin-right: 10px;
+}
+
+#city {
+  margin: 0 5%;
+  width: 50%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #002e82;
+  cursor: pointer;
+  font-weight: bold;
+  background: #fff;
+  background-image: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 20%;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #002e82;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+  color: white;
+}
+
+.select:hover::after {
+  color: #C9E877;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  background: #E6F4C1;
+  background-image: none;
+  font-weight: bolder;
+  text-align: justify;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #002e82;
+  cursor: pointer;
+  font-size: bolder;
+}
+
+button::-ms-expand {
+  display: none;
+}
+
+button:hover {
+  color: #002e82;
+  background: #C9E877;
+  border: 1px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  width: 35%;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: 0.25em;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .search {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 25px;
+  }
+}
+.search::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  color: #E6F4C1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #002e82;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+  .select {
+    width: 80%;
+  }
+
+  #city {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+
+  #filters {
+    order: 2;
+  }
+
+  .widget {
+    min-width: unset;
+  }
+}
+#googlemap {
+  min-height: 500px;
+  width: 100%;
+  height: 80%;
+}
+
+form {
+  padding: 6% 0;
+  margin: 0;
+}
+
+.locator-container {
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #555;
+}
+
+.sidebar {
+  height: 100%;
+  border: 1px solid #EEE;
+  border-right: none;
+}
+
+.locator-heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  display: none;
+}
+
+.locator-heading h2 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+  color: #333;
+}
+
+.listings {
+  height: 100vh;
+  /*padding-bottom: 36px;*/
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #FFF;
+  color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #one {
+    order: 2;
+  }
+
+  #two {
+    order: 1;
+  }
+
+  .locator-heading {
+    display: block;
+  }
+
+  #logo {
+    width: 100%;
+    margin: auto;
+  }
+
+  #googlemap {
+    height: unset;
+  }
+
+  .listings {
+    height: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1300px) {
+  .select {
+    font-size: small;
+  }
+
+  .select::after {
+    padding: 0 0.3em;
+  }
+
+  .search {
+    font-size: small;
+  }
+
+  .search::after {
+    padding: 0 0.3em;
+  }
+}
